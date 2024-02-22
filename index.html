@@ -4,13 +4,42 @@
     <title> Numbers App</title>
     <script src="base.js">
     </script>
+    <style>
+        .column {
+           float: left;
+           width: 50%;
+           padding: 10px;
+           box-sizing: border-box;
+          
+        }
+        .row::after {
+           content: "";
+           clear: both;
+           display: table;
+        }
+     </style>
     </head>
     <body>
-        <h1> Arithmetic </h1>
-        <section name="Aform">
-            <input type="text" id="number1" value=" "/> + <input type="text" id="number2" value=" "/> 
-            <button onclick="add()">=</button>
-            <input type="text" id="result" value=" "></input>
-        </section>
+        <div class="row">
+            <div class="column">          
+               <section>
+                <h2>Arithmetic</h2>
+                <input id="operand1"/> 
+                <label>+</label>
+                <input id="operand2"/>
+                <button onclick="add()">=</button>
+                <label id="sum"></label>  
+            </section>
+            </div>
+            <div class="column">
+                <section>
+                    <h2>Prime check</h2>                
+                    <label>Number to test:</label>
+                    <input id="primenumber"/>
+                    <button onclick="isPrime()">Check</button>
+                    <label id="primeCheckResult"></label>  
+                </section>           
+            </div>       
+         </div>
     </body>
 </html>
