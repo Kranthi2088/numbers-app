@@ -12,7 +12,7 @@ async function add(){
 async function isprime(){
     const numberToTest = document.getElementById("primenumber");            
     let n = numberToTest.value;            
-    const response = await fetch("???" + n);
+    const response = await fetch("https://primes-service-fgl9.onrender.com/primes/" + n);
     const result = await response.json();
     document.getElementById("primeCheckResult").innerText = result;
 }
