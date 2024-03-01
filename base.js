@@ -32,5 +32,5 @@ async function cipher() {
       shift
   );
   const result = await response.json();
-  document.getElementById("cipherCheckResult").innerText = result;
+  document.getElementById("cipherCheckResult").innerText = result.ceaser;
 }
