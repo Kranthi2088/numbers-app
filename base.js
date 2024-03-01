@@ -25,7 +25,12 @@ async function cipher() {
   const textToTest = document.getElementById("ciphertext");
   var str = textToTest.value;
   let shift = 3;
-  const response = await fetch("" + str + "/" + shift);
+  const response = await fetch(
+    "https://ciphers-service-kranthi2088.onrender.com/ciphers/ceaser/" +
+      str +
+      "/" +
+      shift
+  );
   const result = await response.json();
   document.getElementById("cipherCheckResult").innerText = result;
 }
